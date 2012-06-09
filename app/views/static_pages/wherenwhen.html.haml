@@ -1,18 +1,23 @@
 = content_for(:head) do
 	= javascript_include_tag "//maps.googleapis.com/maps/api/js?sensor=false&region=GB" 
+	= javascript_include_tag "map.js"
 
-%h1 Where n When
+.page-header
+	%h1 Where n When
 
 %section
 	.row
-		.span8
-			%span{ id:"map_canvas", style:"display: block; width: 500px; height: 300px; margin-top:10px;" }
+		.span6
+			%span{ id:"map_canvas", style:"display: block; width: 450px; height: 350px; margin-top:10px;" }
 				%noscript
 				= image_tag("//maps.googleapis.com/maps/api/staticmap?zoom=15&size=750x430&maptype=roadmap&markers=color:red%7Clabel:A%7C51.44875,-0.322626&sensor=false") 
-		.span4
+		.span6
+			%h3 How to get there 
+			%p
+				look at the map!
 			%h3 Class times 
 			%p
-				Every friday at 7:00
+				Every friday 7:00 - 9:00
 			%h3 What to expect
 			%p
 				the unexpected!
