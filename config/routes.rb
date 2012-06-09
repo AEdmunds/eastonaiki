@@ -1,4 +1,13 @@
 Eastonaiki::Application.routes.draw do
+  
+  root to: "static_pages#home"
+
+  match '/wherenwhen',    to: 'static_pages#wherenwhen'
+  match '/instructors',   to: 'static_pages#instructors'
+  match '/aikidofaq', to: 'static_pages#aikidofaq'
+  match '/gallery',    to: 'static_pages#gallery'
+  match '/ourfriends',   to: 'static_pages#ourfriends'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
