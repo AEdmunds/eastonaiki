@@ -2,7 +2,7 @@ Eastonaiki::Application.routes.draw do
   
   root to: "static_pages#home"
 
-  match '/wherenwhen',    to: 'static_pages#wherenwhen'
+  match '/wherenwhen',    to: 'map#index'
   match '/instructors',   to: 'static_pages#instructors'
   match '/aikidofaq', to: 'static_pages#aikidofaq'
   match '/gallery',    to: 'static_pages#gallery'
