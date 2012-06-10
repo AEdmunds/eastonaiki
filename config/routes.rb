@@ -1,11 +1,13 @@
 Eastonaiki::Application.routes.draw do
   
+  get "gallery/index"
+
   root to: "static_pages#home"
 
   match '/wherenwhen',    to: 'map#index'
   match '/instructors',   to: 'static_pages#instructors'
   match '/aikidofaq', to: 'static_pages#aikidofaq'
-  match '/gallery',    to: 'static_pages#gallery'
+  match '/gallery',    to: 'gallery#index'
   match '/ourfriends',   to: 'static_pages#ourfriends'
   
   # The priority is based upon order of creation:

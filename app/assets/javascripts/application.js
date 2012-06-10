@@ -13,3 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require fancybox/jquery.mousewheel-3.0.6.pack
+//= require fancybox/jquery.fancybox.pack
+//= require fancybox/helpers/jquery.fancybox-thumbs

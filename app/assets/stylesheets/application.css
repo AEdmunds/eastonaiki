@@ -10,4 +10,6 @@
  *
  *= require_self
  *= require_tree .
+ *= require fancybox/jquery.fancybox
+ *= require fancybox/helpers/jquery.fancybox-thumbs
 */
