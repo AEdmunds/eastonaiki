@@ -1,9 +1,6 @@
 = content_for(:head) do
-	= stylesheet_link_tag "fancybox/jquery.fancybox", media: "screen"
-	= stylesheet_link_tag "fancybox/helpers/jquery.fancybox-thumbs", media: "screen"
-	= javascript_include_tag "fancybox/jquery.mousewheel-3.0.6.pack"
-	= javascript_include_tag "fancybox/jquery.fancybox.pack"
-	= javascript_include_tag "fancybox/helpers/jquery.fancybox-thumbs"
+	= stylesheet_link_tag "fancybox", media: "screen"
+	= javascript_include_tag "fancybox"
 	
 .page-header
 	%h1 gallery
