@@ -18,4 +18,5 @@ initialize = ->
         position: latlng
 
 $ ->
-    initialize()
+    if $("#map_canvas").length > 0
+        initialize()
