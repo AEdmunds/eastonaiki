@@ -4,7 +4,7 @@ class FaqsController < ApplicationController
 	end	
 
 	def show
-  		@faqs = Faq.find(params[:id])
+  		@faq = Faq.find(params[:id])
 	end	
 
 	def new 
@@ -14,17 +14,31 @@ class FaqsController < ApplicationController
 	def create
 		@faq = Faq.new(params[:faq])
 
-		@faq.save
-		redirect_to :action => :show, :id => @faq.id
-	end	
+		if @faq.save
+        	redirect_to @faq, notice: 'User was successfully created.' 
+		else
+        	render action: "new" 
+		end
+    end
 
 	def edit 
-		@faqs = Faq.find(params[:id])
+		@faq = Faq.find(params[:id])
 	end 
 	
 	def update
-
+		 @faq = Faq.find(params[:id])
+		 if @faq.update_attributes(params[:faq])
+		 	redirect_to @faq, notice: 'User was successfully updated.'
+		 else	
+			render action: "edit" 	
+		 end	
 	end 
 
+	def distroy
+		@faq = Faq.find(params[:id])
+  		@faq.destroy
+
+		redirect_to posts_url 
+    end 	
 
 end

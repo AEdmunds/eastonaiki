@@ -1,0 +1,20 @@
+= form_for @faq do |f| 
+  - if @faq.errors.any? 
+    .errorExplanation
+      %h2
+        = pluralize(@faq.errors.count, "error")
+        prohibited this faq from being saved:
+      %ul
+        - @faq.errors.full_messages.each do |msg| 
+          %li 
+            = msg 
+  %p
+    = f.label :question 
+    %br  
+    = f.text_field :question 
+  %p
+    = f.label :answer 
+    %br
+    = f.text_field :answer 
+  %p
+    = f.submit 
