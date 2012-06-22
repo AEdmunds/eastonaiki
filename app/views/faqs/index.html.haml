@@ -1,0 +1,10 @@
+.page-header
+	%h1 Aikido FAQ's <small>clicke on a question to see the answer</small>
+%section
+	%ul.questions
+		- @faqs.each do |post|
+			%li 
+				= link_to post.question, "##{ post.id }" 
+				.hide{ id:"#{ post.id }" } 
+					= post.answer
+			
